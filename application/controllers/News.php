@@ -16,7 +16,6 @@ class News extends CI_Controller {
 		        $this->load->view('templates/header', $data);
 		        $this->load->view('news/index', $data);
 		        $this->load->view('templates/footer');
-// 		        echo "ada";
 		}
 
 		public function view($slug = NULL)
@@ -45,6 +44,9 @@ class News extends CI_Controller {
 			$this->form_validation->set_rules('title', 'Title', 'required');
 			$this->form_validation->set_rules('text', 'Text', 'required');
 		
+			echo "create";
+			echo "<br>";
+			
 			if ($this->form_validation->run() === FALSE)
 			{
 				$this->load->view('templates/header', $data);
