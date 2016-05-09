@@ -21,14 +21,12 @@ class News extends CI_Controller {
 
 		public function view($slug = NULL)
 		{
-// 				echo $slug;
-// 				die();
 				
 		        $data['news_item'] = $this->news_model->get_news($slug);
 		
 		        if (empty($data['news_item']))
 		        {		
-		        		echo "page gives a $slug number!";
+		        		echo "News/view/$slug";
 		        		die();
 		        		
 		                show_404();
@@ -47,7 +45,7 @@ class News extends CI_Controller {
 			$this->load->helper('form');
 			$this->load->library('form_validation');
 		
-			$data['title'] = 'Create a news item';
+			$data['title'] = 'Create';
 		
 			$this->form_validation->set_rules('title', 'Title', 'required');
 			$this->form_validation->set_rules('text', 'Text', 'required');
