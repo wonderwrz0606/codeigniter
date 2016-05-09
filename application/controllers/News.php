@@ -21,8 +21,8 @@ class News extends CI_Controller {
 
 		public function view($slug = NULL)
 		{
-				echo $slug;
-				die();
+// 				echo $slug;
+// 				die();
 				
 		        $data['news_item'] = $this->news_model->get_news($slug);
 		
@@ -38,7 +38,6 @@ class News extends CI_Controller {
 		
 		        $this->load->view('templates/header', $data);
 		        $this->load->view('news/view', $data);
-		       
 		        $this->load->view('templates/footer');
 		}
 		
