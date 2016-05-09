@@ -36,7 +36,7 @@ $config['base_url'] = 'http://52.38.183.106/codeigniter';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
