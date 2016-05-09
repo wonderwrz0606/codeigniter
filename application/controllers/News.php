@@ -10,6 +10,7 @@ class News extends CI_Controller {
 
 		public function index()
 		{
+				
 		        $data['news'] = $this->news_model->get_news();
 		        $data['title'] = 'Index';
 		
@@ -20,10 +21,16 @@ class News extends CI_Controller {
 
 		public function view($slug = NULL)
 		{
+				echo $slug;
+				die();
+				
 		        $data['news_item'] = $this->news_model->get_news($slug);
 		
 		        if (empty($data['news_item']))
-		        {
+		        {		
+		        		echo "plage give a $slug number!";
+		        		die();
+		        		
 		                show_404();
 		        }
 		
@@ -36,6 +43,9 @@ class News extends CI_Controller {
 		
 		public function create()
 		{
+			echo "create";
+			die();
+			
 			$this->load->helper('form');
 			$this->load->library('form_validation');
 		
@@ -43,10 +53,7 @@ class News extends CI_Controller {
 		
 			$this->form_validation->set_rules('title', 'Title', 'required');
 			$this->form_validation->set_rules('text', 'Text', 'required');
-		
-			echo "create";
-			echo "<br>";
-			
+
 			if ($this->form_validation->run() === FALSE)
 			{
 				$this->load->view('templates/header', $data);

@@ -1,3 +1,3 @@
 <?php
-	echo "Hello World-HOME!";
+	echo "Pages_home!";
 ?>

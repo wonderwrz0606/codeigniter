@@ -1,3 +1,3 @@
 <?php
-	echo "Hello World-ABOUT!";
+	echo "Pages_about!";
 ?>

@@ -29,7 +29,7 @@ class News_model extends CI_Model {
         			'slug' => $slug,
         			'text' => $this->input->post('text')
         	);
-        	echo "trest";
+        	echo "test";
         	die();
         	
         	return $this->db->insert('news', $data);
