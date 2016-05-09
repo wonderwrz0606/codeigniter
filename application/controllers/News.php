@@ -28,7 +28,7 @@ class News extends CI_Controller {
 		
 		        if (empty($data['news_item']))
 		        {		
-		        		echo "plage give a $slug number!";
+		        		echo "page gives a $slug number!";
 		        		die();
 		        		
 		                show_404();
