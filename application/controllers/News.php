@@ -38,13 +38,12 @@ class News extends CI_Controller {
 		
 		        $this->load->view('templates/header', $data);
 		        $this->load->view('news/view', $data);
+		       
 		        $this->load->view('templates/footer');
 		}
 		
 		public function create()
 		{
-// 			echo "create";
-// 			die();
 			
 			$this->load->helper('form');
 			$this->load->library('form_validation');
