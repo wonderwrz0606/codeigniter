@@ -26,9 +26,7 @@ class News extends CI_Controller {
 		
 		        if (empty($data['news_item']))
 		        {		
-		        		echo "News/view/$slug";
-		        		die();
-		        		
+		        		echo "error: News/view/ -> $slug";
 		                show_404();
 		        }
 		
@@ -41,8 +39,6 @@ class News extends CI_Controller {
 		
 		public function create()
 		{
-			echo "create";
-			echo "<br>";
 			
 			$this->load->helper('form');
 			$this->load->library('form_validation');
@@ -54,7 +50,7 @@ class News extends CI_Controller {
 
 			if ($this->form_validation->run() === FALSE)
 			{
-				echo "false";
+				echo "News/view/ -> form validation -> false";
 				echo "<br>";
 				
 				$this->load->view('templates/header', $data);
@@ -64,7 +60,7 @@ class News extends CI_Controller {
 			}
 			else
 			{
-				echo "true";
+				echo "News/view/ -> form validation -> true";
 				echo "<br>";
 				$this->news_model->set_news();
 				$this->load->view('news/success');

@@ -23,8 +23,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://52.38.183.106/codeigniter/';
-//$config['base_url'] = '/Users/Sam/Sites/codeigniter';
+//$config['base_url'] = '';
+//$config['base_url'] = 'http://52.38.183.106/codeigniter/';
+$config['base_url'] = 'http://localhost/~Sam/codeigniter';
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,8 @@ $config['base_url'] = 'http://52.38.183.106/codeigniter/';
 | variable so that it is blank.
 |
 */
+// form submittion: base_url + index.php
+//$config['index_page'] = 'index.php';
 $config['index_page'] = '';
 
 /*
